@@ -1,13 +1,15 @@
-
-
+# passgen.py
 import random
 
-passlaenge = int(input("enter the length of password"))
+passwortlaenge = int(input("Bitte die Passwortlänge eingeben: "))
 
-#werte="abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+kleinbuchstaben = "abcdefghijklmnopqrstuvwxyz"
+grossbuchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+sonderzeichen = "!@#$%^&*()?"
+zahlen = "0123456789"
 
-werte="abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789!#?()" #gut lesbarer code
+werte = kleinbuchstaben + grossbuchstaben + sonderzeichen + zahlen
 
-p = "".join(random.sample(werte,passlaenge ))
+passwort = "".join(random.sample(werte, passwortlaenge))
 
-print(p)
+print(passwort)
